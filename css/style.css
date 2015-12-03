@@ -1,0 +1,112 @@
+/*Navbar*/
+.navbar-default {
+	background-color: #ccebff;
+	border-radius: 0;
+	background-image: none;
+}
+
+.navbar-default .navbar-brand {
+	color: #000000;
+	font-size: 20px;
+	font-family: Tw Cen MT;
+}
+
+.navbar-default .navbar-brand:hover,
+.navbar-default .navbbar-brand:focus,
+.navbar-default .navbar-nav > li > a:hover,
+.navbar-default .navbar-nav > li > a:focus {
+	color: #000000;
+	font-weight: bolder;
+	font-family: Tw Cen MT;
+}
+
+.navbar-default .navbar-nav > li > a {
+	color: #000000;
+	font-size: 16px;
+	font-family: Tw Cen MT;
+	font-weight: lighter;
+}
+
+.navbar-header .navbar-toggle {
+	color: #000000;
+}
+
+.jumbotron {
+	background-image: url("../assets/ParisTexture.png");
+	text-align: left;
+	font-family: Tw Cen MT;
+}
+.portfolio-thumbnail:hover {
+	background-color: #0099ff;
+
+}
+
+.portfolio-thumbnail {
+	background-color: #000;
+
+}
+
+#city {
+	max-width: 256px;
+	max-height: 256px;
+}
+
+.glyphicon-menu-hamburger:hover {
+	color: #0099ff;
+	
+}
+
+.navbar-toggle:hover {
+	background-color:#000000;
+}
+
+.navbar-header:hover {
+	background-color:#ccebff;
+}
+
+
+.thumbnail {
+	max-width: 258px;
+	max-height: 258px;
+}
+
+h2 {
+	font-size: 45px;
+}
+h3 {
+  font-weight: bold;
+  font-family: Tw Cen MT;
+}
+
+h4 {
+	font-family: Tw Cen MT;
+	font-size: 20px
+}
+
+h5 {
+	font-family: Tw Cen MT;
+	font-size: 25px;
+}
+
+p {
+  font-size: 17px;
+  font-family: Tw Cen MT;
+}
+
+ul {
+  font-size: 17px;
+  font-family: Tw Cen MT;
+}
+
+a {
+  color: #0099ff;
+}
+
+a:hover {
+  color: #ebd122;
+}
+
+
+body {
+	padding-top: 50px;
+}
