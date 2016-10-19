@@ -45,7 +45,8 @@ a {
 }
 
 a:hover {
-  color: #ebd122;
+  color: #0099ff;
+  font-weight: bold;
 }
 
 
