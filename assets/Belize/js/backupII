@@ -1,0 +1,327 @@
+//Main.js
+mapboxgl.accessToken = 'pk.eyJ1Ijoic3dhbDk0IiwiYSI6ImNpZnk5aWdzcDR5dDl0ZWx5dDhwZW13ejAifQ.y18LYK4VbBo8evRHtqiEiw';
+
+
+var map = new mapboxgl.Map({
+    container: 'map', // container id
+    style: 'mapbox://styles/mapbox/streets-v9', //stylesheet location
+    center: [-88.6,17.2], // starting position
+    zoom: 9 // starting zoom
+});
+
+map.on('load', function() {
+	getData(map)
+})
+
+function getData(map) {
+        $.ajax("../data/def7.geojson", {
+        dataType: "json",
+        success: function(data){
+
+            
+        loadData(map, data);
+
+        
+            
+        }
+    });
+}
+
+function loadData(map, data){
+	
+	map.addSource('def', {
+        'type': 'geojson',
+        'data': data
+    })
+
+    filterData(data)
+
+}
+
+function filterData(data){
+
+    var filterGroupReason = document.getElementById('reason-filter');
+    var filterGroupYear = document.getElementById('year-filter');
+    var yearsArray = [], reasonsArray = [];
+
+    data.features.forEach(function(feature){
+
+        var reason = feature.properties['reason'];
+        var year = feature.properties['DESCR']
+        var layerID = 'because-' + reason + year;
+
+        if (!map.getLayer(layerID)) {
+            map.addLayer({
+                "id": layerID,
+                "type": "fill",
+                "source": "def",
+                "layout": {},
+                "paint": {
+                    "fill-color": "#088",
+                    "fill-opacity": 0.8
+                },
+                "filter": [
+                    "all",
+                    ["==", "reason", reason],
+                    ["==", "DESCR", year]
+                ]
+
+            });
+
+            if ($.inArray(reason, reasonsArray) == -1){
+                reasonsArray.push(reason);
+                //create input and lable and event listener for reason
+                //set label.textContent = reason
+                //set input.className = reason
+
+                var input = document.createElement('input');
+                input.type = 'checkbox';
+                input.id = reason;
+                input.checked = true;
+                filterGroupReason.appendChild(input);
+
+
+                var label = document.createElement('label');
+                label.setAttribute('for', reason);
+                label.textContent = reason;
+                filterGroupReason.appendChild(label);
+
+                input.addEventListener('change', function(e) {
+                    map.setLayoutProperty(reason, 'visibility',
+                        e.target.checked ? 'visible' : 'none');
+                });
+            };
+            
+
+            if ($.inArray(year, yearsArray) == -1){
+                reasonsArray.push(year);
+                //create input and lable and event listener for year
+                //set label.textContent = year
+                //set input.className = year
+
+                var input = document.createElement('input');
+                input.type = 'checkbox';
+                input.id = year;
+                input.checked = true;
+                filterGroupReason.appendChild(input);
+
+
+                var label = document.createElement('label');
+                label.setAttribute('for', year);
+                label.textContent = year;
+                filterGroupReason.appendChild(label);
+
+                input.addEventListener('change', function(e) {
+                    map.setLayoutProperty(year, 'visibility',
+                        e.target.checked ? 'visible' : 'none');
+                });
+            };
+
+            
+        };
+        
+
+    });
+  
+}
+
+
+
+
+function filterDataByYear(data){
+
+    var filterGroup = document.getElementById('filter-group');
+
+    data.features.forEach(function(feature){
+
+        var date = feature.properties['DESCR'];
+        var layerID = 'because-' + date;
+
+        if (!map.getLayer(layerID)) {
+            map.addLayer({
+                "id": layerID,
+                "type": "fill",
+                "source": "def",
+                "layout": {},
+                "paint": {
+                    "fill-color": "#088",
+                    "fill-opacity": 0.8
+                },
+                "filter": ["==", "date", date]
+
+            });
+
+            var input = document.createElement('input');
+            input.type = 'checkbox';
+            input.id = layerID;
+            input.checked = true;
+            console.log(filterGroup);
+            filterGroup.appendChild(input);
+
+
+            var label = document.createElement('label');
+            label.setAttribute('for', layerID);
+            label.textContent = date;
+            filterGroup.appendChild(label);
+
+            input.addEventListener('change', function(e) {
+                map.setLayoutProperty(layerID, 'visibility',
+                    e.target.checked ? 'visible' : 'none');
+            })
+        }
+
+    });
+
+
+
+    
+}
+
+
+
+
+
+.reason-filter {
+        font: 12px/20px 'Helvetica Neue', Arial, Helvetica, sans-serif;
+        font-weight: 600;
+        position: absolute;
+        top: 10px;
+        right: 10px;
+        z-index: 1;
+        border-radius: 3px;
+        width: 120px;
+        color: #fff;
+    }
+
+.reason-filter input[type=checkbox]:first-child + label {
+        border-radius: 3px 3px 0 0;
+    }
+
+.reason-filter label:last-child {
+        border-radius: 0 0 3px 3px;
+        border: none;
+    }
+
+.reason-filter input[type=checkbox] {
+        display: none;
+    }
+
+.reason-filter input[type=checkbox] + label {
+        background-color: #3386c0;
+        display: block;
+        cursor: pointer;
+        padding: 10px;
+        border-bottom: 1px solid rgba(0, 0, 0, 0.25);
+    }
+
+.reason-filter input[type=checkbox] + label {
+        background-color: #3386c0;
+        text-transform: capitalize;
+    }
+
+.reason-filter input[type=checkbox] + label:hover,
+.reason-filter input[type=checkbox]:checked + label {
+        background-color: #4ea0da;
+    }
+
+.reason-filter input[type=checkbox]:checked + label:before {
+        content: '✔';
+        margin-right: 5px;
+    }
+
+
+
+
+.year-filter {
+        font: 12px/20px 'Helvetica Neue', Arial, Helvetica, sans-serif;
+        font-weight: 600;
+        position: absolute;
+        top: 10px;
+        right: 10px;
+        z-index: 1;
+        border-radius: 3px;
+        width: 120px;
+        color: #fff;
+    }
+
+.year-filter input[type=checkbox]:first-child + label {
+        border-radius: 3px 3px 0 0;
+    }
+
+.year-filter label:last-child {
+        border-radius: 0 0 3px 3px;
+        border: none;
+    }
+
+.year-filter input[type=checkbox] {
+        display: none;
+    }
+
+.year-filter input[type=checkbox] + label {
+        background-color: #3386c0;
+        display: block;
+        cursor: pointer;
+        padding: 10px;
+        border-bottom: 1px solid rgba(0, 0, 0, 0.25);
+    }
+
+.year-filter input[type=checkbox] + label {
+        background-color: #3386c0;
+        text-transform: capitalize;
+    }
+
+.year-filter input[type=checkbox] + label:hover,
+.year-filter input[type=checkbox]:checked + label {
+        background-color: #4ea0da;
+    }
+
+.year-filter input[type=checkbox]:checked + label:before {
+        content: '✔';
+        margin-right: 5px;
+    }
+
+
+
+
+
+
+
+
+
+
+<nav id='reason-filter' class='reason-filter'></nav>
+<nav id='year-filter' class='year-filter'></nav>
+
+
+
+
+
+
+
+
+
+
+
+
+function FilterBar(map){
+
+    
+
+    $(function() {
+
+        console.log('ran')
+    
+        $("#slider-range").slider({
+            range: true,
+            min: 0,
+            max: 5,
+      
+            slide: function( event, ui ) {
+
+                $( "#amount" ).val( "$" + ui.values[ 0 ] + " - $" + ui.values[ 1 ] );
+            }
+        });
+
+        $( "#amount" ).val( "$" + $( "#slider-range" ).slider( "values", 0 ) + " - $" + $( "#slider-range" ).slider( "values", 1 ) );
+    });
+}

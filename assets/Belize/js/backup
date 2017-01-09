@@ -1,0 +1,138 @@
+//Main.js
+mapboxgl.accessToken = 'pk.eyJ1Ijoic3dhbDk0IiwiYSI6ImNpZnk5aWdzcDR5dDl0ZWx5dDhwZW13ejAifQ.y18LYK4VbBo8evRHtqiEiw';
+
+
+var map = new mapboxgl.Map({
+    container: 'map', // container id
+    style: 'mapbox://styles/mapbox/streets-v9', //stylesheet location
+    center: [-88.6,17.2], // starting position
+    zoom: 9 // starting zoom
+});
+
+map.on('load', function() {
+	getData(map)
+})
+
+function getData(map) {
+        $.ajax("../data/def7.geojson", {
+        dataType: "json",
+        success: function(data){
+
+            
+        loadData(map, data);
+
+        console.log(data)
+        
+            
+        }
+    });
+}
+
+function loadData(map, data){
+	
+	map.addSource('def', {
+        'type': 'geojson',
+        'data': data
+    })
+
+    filterDataByReason(data)
+
+}
+
+function filterDataByReason(data){
+
+    var filterGroup = document.getElementById('filter-group');
+
+    data.features.forEach(function(feature){
+
+        var reason = feature.properties['reason'];
+        var layerID = 'because-' + reason;
+
+        if (!map.getLayer(layerID)) {
+            map.addLayer({
+                "id": layerID,
+                "type": "fill",
+                "source": "def",
+                "layout": {},
+                "paint": {
+                    "fill-color": "#088",
+                    "fill-opacity": 0.8
+                },
+                "filter": ["==", "reason", reason]
+
+            });
+
+            var input = document.createElement('input');
+            input.type = 'checkbox';
+            input.id = layerID;
+            input.checked = true;
+            console.log(filterGroup);
+            filterGroup.appendChild(input);
+
+
+            var label = document.createElement('label');
+            label.setAttribute('for', layerID);
+            label.textContent = reason;
+            filterGroup.appendChild(label);
+
+            input.addEventListener('change', function(e) {
+                map.setLayoutProperty(layerID, 'visibility',
+                    e.target.checked ? 'visible' : 'none');
+            })
+        }
+
+    });
+  
+}
+
+
+
+
+function filterDataByYear(data){
+
+    var filterGroup = document.getElementById('filter-group');
+
+    data.features.forEach(function(feature){
+
+        var date = feature.properties['DESCR'];
+        var layerID = 'because-' + date;
+
+        if (!map.getLayer(layerID)) {
+            map.addLayer({
+                "id": layerID,
+                "type": "fill",
+                "source": "def",
+                "layout": {},
+                "paint": {
+                    "fill-color": "#088",
+                    "fill-opacity": 0.8
+                },
+                "filter": ["==", "date", date]
+
+            });
+
+            var input = document.createElement('input');
+            input.type = 'checkbox';
+            input.id = layerID;
+            input.checked = true;
+            console.log(filterGroup);
+            filterGroup.appendChild(input);
+
+
+            var label = document.createElement('label');
+            label.setAttribute('for', layerID);
+            label.textContent = date;
+            filterGroup.appendChild(label);
+
+            input.addEventListener('change', function(e) {
+                map.setLayoutProperty(layerID, 'visibility',
+                    e.target.checked ? 'visible' : 'none');
+            })
+        }
+
+    });
+
+
+
+    
+}

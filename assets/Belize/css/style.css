@@ -1,0 +1,339 @@
+/*The CSS*/
+
+body { margin:0; padding:0; }
+
+#map { position:absolute; top:0; bottom:0; width:100%; }
+
+
+#loading{
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    width: 100%;
+    height: 100%;
+    background-color: #000;
+    z-index: 1001;
+    opacity: 0.75;
+
+
+}
+
+h1 {
+    font-family: Skia;
+    font-size: 100px;
+    text-align: center;
+    vertical-align: center;
+    color: #fff;
+    line-height: 100px;
+}
+
+
+/*TITLE*/
+
+#title {
+    position: absolute;
+    z-index: 1000;
+    width: 500px;
+    height: 95px;
+    top: 10px;
+    left: 10px;
+}
+
+
+
+
+
+/*REASON FILTER*/
+
+#menu {
+        background: #000;
+        position: absolute;
+        z-index: 1;
+        top: 130px;
+        right: 10px;
+        border-radius: 3px;
+        width: 120px;
+        border: 2px solid rgba(0,0,0,0.4);
+        font-family: Skia;
+    }
+
+#menu a {
+    font-size: 13px;
+    color: #fff;
+    background-color: #A9A9A9;
+    display: block;
+    margin: 0;
+    padding: 0;
+    padding: 10px;
+    text-decoration: none;
+    border-bottom: 1px solid rgba(0,0,0,0.25);
+    text-align: center;
+}
+
+#menu a:last-child {
+    border: none;
+    background-color: #A9A9A9;
+
+}
+
+#menu a:hover {
+    background-color: #663636;
+    color: #404040;
+}
+
+#menu a.active {
+    background-color: #B05D5D;
+    color: #ffffff;
+}
+
+#menu a.active:hover {
+    background: #663636;
+}
+
+#menu a.inactive {
+    background-color: #A0A0A0;
+    color: #C8C8C8;
+}
+
+#menu a.inactive a {
+    color: #000;
+}
+
+#menu a.inactive:hover {
+    background: #585858;
+}
+
+
+
+
+
+
+/*DATE FILTER*/
+
+.map-overlay {
+    font: 12px/20px 'Helvetica Neue', Arial, Helvetica, sans-serif;
+    position: absolute;
+    width: 200px;
+    height: 90px;
+    top: 0;
+    right: 0;
+    padding: 10px;
+    z-index: 1000;
+
+}
+
+.map-overlay .map-overlay-inner {
+    background-color: #B05D5D;
+    box-shadow:0 1px 2px rgba(0, 0, 0, 0.20);
+    border-radius: 3px;
+    padding: 10px;
+    margin-bottom: 10px;
+    height: 90px;
+    border-style: solid;
+    border-width: 2px;
+    border-color: #000;
+}
+
+.map-overlay h2 {
+    line-height: 24px;
+    display: block;
+    margin: 0 0 10px;
+
+}
+
+.map-overlay .legend .bar {
+    height: 10px;
+    width: 100%;
+    background: linear-gradient(to right, #FCA107, #7F3121);
+}
+
+.map-overlay input {
+    background-color: transparent;
+    display: inline-block;
+    width: 100%;
+    position: relative;
+    margin: 0;
+    cursor: ew-resize;
+}
+
+#time-inner {
+    max-height: 50px;
+    display: inline;
+    width: 50%;
+}
+
+#checkbox1 {
+    display: inline;
+    width: 20%;
+}
+
+input[type='checkbox'] {
+    background-color: #D6B6B6;
+}
+
+input[type='checkbox']:checked {
+    background-color: #663636;
+}
+
+
+
+
+
+/*BUTTONS*/
+
+.overlayButton {
+    border-radius: 3px;
+    z-index: 1000;
+    position: absolute;
+    background-color: #A0A0A0;
+    width: 50px;
+    height: 50px;
+    right: 10px;
+    border-style: solid;
+    border-width: 2px;
+    border-color: #000;
+}
+
+.buttonActive {
+    border-radius: 3px;
+    z-index: 1000;
+    position: absolute;
+    background-color: #B05D5D;
+    width: 50px;
+    height: 50px;
+    right: 10px;
+    border-style: solid;
+    border-width: 2px;
+    border-color: #000;
+}
+
+.buttonActiveGreen {
+    border-radius: 3px;
+    z-index: 1000;
+    position: absolute;
+    background-color: #59c655;
+    width: 50px;
+    height: 50px;
+    right: 10px;
+    border-style: solid;
+    border-width: 2px;
+    border-color: #000;
+}
+
+
+
+/*.overlayButton:hover {
+    background-color: #585858;
+}*/
+
+#urbanButton {
+    top: 300px;
+}
+
+#urbanButton:hover {
+    background-color: #585858;
+}
+
+#agButton {
+    top: 360px;
+}
+
+#agButton:hover {
+    background-color: #585858;
+}
+
+
+#paButton {
+    top: 420px;
+}
+
+#paButton:hover {
+    background-color: #585858;
+}
+
+
+
+
+
+
+/*POPUPS*/
+
+#agPopup {
+    z-index: 1005;
+    position: absolute;
+    width: 100px;
+    height: 100px;
+    top: 370px;
+    right: 70px;
+}
+
+#urbanPopup {
+    z-index: 1005;
+    position: absolute;
+    width: 100px;
+    height: 100px;
+    top: 310px;
+    right: 70px;
+}
+
+#paPopup {
+    z-index: 1005;
+    position: absolute;
+    width: 100px;
+    height: 100px;
+    top: 430px;
+    right: 70px;
+}
+
+#menuPopup {
+    z-index: 1005;
+    position: absolute;
+    width: 100px;
+    height: 100px;
+    top: 150px;
+    right: 140px;
+}
+
+
+
+
+
+
+
+
+h2 {
+    font-family: Skia;
+    text-align: center;
+    font-size: 25px;
+    color: #fff;
+}
+
+p {
+    display: inline;
+    width: 80%;
+    font-family: Skia;
+    font-size: 15px;
+    color: #fff;
+}
+
+h3 {
+    display: inline;
+    font-family: Skia;
+    font-size: 15px;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

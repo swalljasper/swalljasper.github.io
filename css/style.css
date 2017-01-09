@@ -40,6 +40,11 @@ ul {
   font-family: Tw Cen MT;
 }
 
+ol {
+  font-size: 17px;
+  font-family: Tw Cen MT;
+}
+
 a {
   color: #0099ff;
 }
@@ -52,6 +57,32 @@ a:hover {
 
 body {
 	padding-top: 50px;
+}
+
+
+.container {
+	background-image: url("../assets/belize-texture.png");
+	padding-right: 15px;
+  	padding-left: 15px;
+  	margin-right: auto;
+  	margin-left: auto;
+  	height: 100%;
+}
+
+.container-fluid {
+	background-image: url("../assets/belize-texture.png");
+	padding-right: 15px;
+  	padding-left: 15px;
+  	margin-right: auto;
+  	margin-left: auto;
+  	height: 100%;
+}
+
+.container-up {
+  	padding-right: 15px;
+  	padding-left: 15px;
+  	margin-right: auto;
+  	margin-left: auto;
 }
 
 
