@@ -92,7 +92,7 @@ map.on('load', function() {
 
 
 function getDeforestationData(map) {
-        $.ajax("../data/deforestation.geojson", {
+        $.ajax("../../data/deforestation.geojson", {
         dataType: "json",
         success: function(data){
 
@@ -427,7 +427,7 @@ function getAgData(map) {
 
 function getUrbanData(map) {
 
-    $.ajax("../data/Urban.geojson", {
+    $.ajax("../../data/Urban.geojson", {
         dataType: "json",
         success: function(data){
 
@@ -487,7 +487,7 @@ function getUrbanData(map) {
 function getProtectedAreasData(map) {
 
 
-    $.ajax("../data/ProtectedAreas1.geojson", {
+    $.ajax("../../data/ProtectedAreas1.geojson", {
         dataType: "json",
         success: function(data){
 
