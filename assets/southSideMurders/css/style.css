@@ -1,0 +1,179 @@
+/*header*/
+#header {
+	box-shadow: inset 3px 4px 5px rgb(50,77,114);
+	height: 60px;
+	background-color: rgb(10,37,74);
+	border-color: black;
+	border-radius: 5px;
+
+}
+
+/*main elements*/
+#main {
+	max-height: 600px;
+}
+
+#map {
+	height: 600px;
+	width: 75%;
+	display: inline-block;
+	padding: 5px;
+	border-width: 5px;
+	border-color: black;
+	float: left;
+	border-radius: 5px;
+}
+
+#info {
+	box-shadow: inset 3px 4px 5px rgb(50,77,114);
+	width: 22%;
+	height: 600px;
+	border-width: 5px;
+	border-color: #808080;
+	background-color: rgb(10,37,74);
+	margin-left: 78%;
+	border-radius: 5px;
+
+
+	font-family: Futura;
+	font-size: 14.5px;
+	text-align: center;
+	color: #d9d9d9;
+}
+
+
+/*slider*/
+.map-overlay {
+    font: 12px/20px 'Helvetica Neue', Arial, Helvetica, sans-serif;
+    position: absolute;
+    width: 25%;
+    top: 0;
+    right: 0;
+    padding: 10px;
+    z-index: 1000; 
+}
+
+.map-overlay .map-overlay-inner {
+    background-color: rgb(10,37,74);
+    box-shadow:0 1px 2px rgba(0, 0, 0, 0.20);
+    border-radius: 3px;
+    padding: 10px;
+    margin-bottom: 10px;
+
+}
+
+.map-overlay h2 {
+    line-height: 24px;
+    display: block;
+    margin: 0 0 10px;
+}
+
+
+.map-overlay input {
+    background-color: transparent;
+    display: inline-block;
+    width: 100%;
+    position: relative;
+    margin: 0;
+    cursor: ew-resize;
+}
+
+/*legend*/
+#legend {
+    position: absolute;
+    width: 22.5%;
+    top: 95px;
+    right: 10px;
+    padding: 10px;
+    z-index: 1100;
+    height: 150px;
+    background-color: rgb(10,37,74);
+    box-shadow:0 1px 2px rgba(0, 0, 0, 0.20); 
+    border-radius: 3px;
+}
+
+/*overlay buttons*/
+#overlay {
+	position: absolute;
+    width: 22.5%;
+    top: 275px;
+    right: 10px;
+    padding: 10px;
+    z-index: 1100;
+    height: 50px;
+    background-color: rgb(10,37,74);
+    box-shadow:0 1px 2px rgba(0, 0, 0, 0.20); 
+    border-radius: 3px;
+}
+
+.policeButton {
+	position: absolute;
+	left:30px;
+	top:15px;
+	background-image: url("../images/police-icon.png");
+	height: 30px;
+	width: 33px;
+	border-radius: 7px;
+	
+
+}
+
+.policeButton:hover {
+	background-image: url("../images/police-icon-hover.png");
+	background-color: rgb(10,37,74);
+}
+
+.hospitalButton {
+	position: absolute;
+	right:30px;
+	top:15px;
+	background-image: url("../images/hospital-icon.png");
+	height: 35px;
+	width: 35px;
+	border-radius: 7px;
+	
+
+}
+
+.hospitalButton:hover {
+	background-image: url("../images/hospital-icon-hover.png");
+	background-color: rgb(10,37,74);
+}
+
+/*popups*/
+.mapboxgl-popup {
+        max-width: 400px;
+        font-family: Futura;
+        font-size: 12px;
+        color: #fff;
+
+    }
+
+.mapboxgl-popup-content {
+	background-color: rgb(10,37,74);
+	box-shadow:0 1px 2px rgba(0, 0, 0, 0.20);
+}
+
+.mapboxgl-popup-tip {
+	opacity: 0;
+}
+
+/*text*/
+h1 {
+	font-family: Futura;
+	font-size: 45px;
+	text-align: center;
+	color: #d9d9d9;
+	text-outline: 2px black;
+}
+
+h2 {
+	font-family: Futura;
+	font-size: 22px;
+	text-align: center;
+	color: #d9d9d9;
+}
+
+a{
+	color: #4db8ff;
+}
