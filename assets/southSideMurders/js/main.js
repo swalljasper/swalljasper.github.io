@@ -186,7 +186,7 @@ function updatePoints(data, y){
 
 
 function getPoliceData(map){
-    $.ajax("../data/PoliceStations.geojson", {
+    $.ajax("../../data/PoliceStations.geojson", {
         dataType: "json",
         success: function(response){
 
@@ -237,7 +237,7 @@ function OverlayPoliceStations(map, response){
 
 
 function getHospitalData(map){
-    $.ajax("../data/Hospitals.geojson", {
+    $.ajax("../../data/Hospitals.geojson", {
         dataType: "json",
         success: function(response){
 
