@@ -6,8 +6,20 @@
 h1 {
 	font-family: Tw Cen MT;
 	font-size: 25px;
-	-webkit-text-stroke-width: 1px;
-	-webkit-text-stroke-color: #fff;
+	color: #fff;
+	text-shadow: 0px 0px 5px #fff;
+
+	
+}
+.image-overlay-text{
+	font-family: Tw Cen MT;
+	font-size: 25px;
+	color: #fff;
+	text-shadow: 0px 0px 2px #000;
+	position: relative;
+	top: -170px;
+	left: 15px;
+
 }
 
 h2 {
@@ -59,6 +71,34 @@ body {
 	padding-top: 50px;
 }
 
+#full{
+	/*position: relative;*/
+	width: 100%;
+	height: 400px;
+	background-color: #000;
+	background-image: url("../assets/OWM_Antarctica_contextLabels-01.png");
+	background-size: cover;
+	background-repeat: none;
+}
+
+#JTtext{
+	position: absolute;
+	/*z-index: 2000;*/
+	top: 40%;
+	left: 15%;
+	width: 70%;
+}
+
+.hugeText{
+	font-size: 70px;
+	text-align: center;
+	line-height: 60px;
+	font-weight: bold;
+	color: #fff;
+	text-shadow: 0px 0px 15px rgba(0,0,0,0.85)
+
+}
+
 
 .container {
 	background-image: url("../assets/belize-texture.png");
@@ -83,6 +123,7 @@ body {
   	padding-left: 15px;
   	margin-right: auto;
   	margin-left: auto;
+  	box-shadow: 0px 0px 8px 5px rgba(0,0,0,0.3)
 }
 
 
@@ -220,6 +261,23 @@ body {
 
 #Gotham {
 	margin-bottom: 50px 
+}
+
+#turkeyImage {
+	max-width: 800px;
+	padding-top: 40px;
+}
+
+#pxpf2 {
+	padding-top: 40px;
+}
+
+#safeWalkingImage {
+	max-width: 300px;
+}
+
+#CLimage {
+	max-width: 600px;
 }
 
 

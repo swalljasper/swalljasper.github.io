@@ -1,6 +1,5 @@
 //Main.js
-console.log('running')
-
+console.log("running")
 mapboxgl.accessToken = 'pk.eyJ1Ijoic3dhbDk0IiwiYSI6ImNpZnk5aWdzcDR5dDl0ZWx5dDhwZW13ejAifQ.y18LYK4VbBo8evRHtqiEiw';
 
 var mapStyle = {
@@ -32,7 +31,7 @@ var bounds = [
     [-87.750761, 18.497659]
 ]
 
-
+var wentThrough = false
 
 layerTimeArray = ["Deforested 1980-1989", "Deforested 1989-1994", "Deforested 1994-2000", "Deforested 2000-2004", "Deforested 2004-2010" ]
 layerReasonArray = ["logging0", "ag0", "urban0"]
@@ -42,6 +41,16 @@ layerArray = [[layerReasonArray[0]+layerTimeArray[0], layerReasonArray[1]+layerT
     [layerReasonArray[0]+layerTimeArray[2], layerReasonArray[1]+layerTimeArray[2], layerReasonArray[2]+layerTimeArray[2]],
     [layerReasonArray[0]+layerTimeArray[3], layerReasonArray[1]+layerTimeArray[3], layerReasonArray[2]+layerTimeArray[3]],
     [layerReasonArray[0]+layerTimeArray[4], layerReasonArray[1]+layerTimeArray[4], layerReasonArray[2]+layerTimeArray[4]]]
+
+allLayersArray = []; 
+
+for (i in layerArray) {
+    for (j in layerArray[i]) {
+        allLayersArray.push(layerArray[i][j])
+    }
+} 
+
+console.log(allLayersArray)   
 
 timelineArray = ["1980","1989","1994","2000","2004","2010"]
 
@@ -114,6 +123,18 @@ function loadData(map, data){
 
     organizeData(data, map)
 
+    var totalAcres1 = 0
+
+    for (i in data.features){
+        newAcres1 = data.features[i].properties.ACRES
+        totalAcres1 += newAcres1 
+    }
+
+    var totalMiles1 = totalAcres1 * 0.0015625
+    console.log(totalMiles1)
+
+
+
 }
 
 function organizeData(data, map){
@@ -149,6 +170,8 @@ function organizeData(data, map){
 
 
         };
+
+        wentThrough = true
         
 
     });
@@ -156,8 +179,6 @@ function organizeData(data, map){
 
     createReasonToggle(map)
     slideTime(map)
-
-    console.log('running')
 
     $("#loading").hide();
   
@@ -202,7 +223,7 @@ function createReasonToggle(map){
 
 function showAndHideReason(map, e, clickedReason, toggle){
 
-    console.log(toggle.className)
+        setTimeout(function(){ changeSQMIText() }, 5000);
 
             if (toggle.className === 'active') {
                 toggle.className = 'inactive'; //be more specific-
@@ -255,6 +276,8 @@ function slideTime(map){
     notSlided = false
 
     document.getElementById('slider').addEventListener('input', function(e) {
+
+        setTimeout(function(){ changeSQMIText() }, 5000);
 
         sliderLevel = e.target.value
 
@@ -579,5 +602,61 @@ function overlayDescription() {
         document.getElementById('menuPopup').style.display = 'none';
     }
 }
+
+var leftPanelOn = true;
+
+map.on("drag", function(){
+    if (leftPanelOn){
+        changeSQMIText()
+    }
+})
+
+map.on("zoom", function(){
+    if (leftPanelOn){
+        changeSQMIText()
+    }
+})
+
+function changeSQMIText(){
+
+    renderedFeatures = []
+
+    if (wentThrough) {
+        renderedFeatures = map.queryRenderedFeatures({layers: allLayersArray})
+    } 
+
+    var totalAcres = 0
+
+    for (i in renderedFeatures){
+        newAcres = renderedFeatures[i].properties.ACRES
+        totalAcres += newAcres
+    }
+
+    var totalMiles = totalAcres * 0.0015625
+
+    var tmString = totalMiles.toString()
+    var index = tmString.indexOf(".")
+    index += 3
+    var tmsFormatted = tmString.slice(0,index)
+    $("#numberContainer").remove()
+    $("#afterTextContainer").remove()
+    $("#IB5").append("<div id='numberContainer'><p class='sqmiles'>" + tmsFormatted + "</p></div><div id='afterTextContainer'><p class='afterTxt'>SQ Miles of Deforestation</p></div>")
+}
+
+$("#hider").click(function(){
+    console.log("ran")
+    leftPanelOn = false;
+    $("#leftPanel").css("display","none")
+    $("#shower").css("display","inline")
+})
+
+$("#shower").click(function(){
+    leftPanelOn = true;
+    $("#shower").css("display","none")
+    $("#leftPanel").css("display","inline")
+    changeSQMIText()
+})
+
+
 
 

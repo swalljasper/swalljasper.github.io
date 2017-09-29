@@ -1,5 +1,9 @@
 /*The CSS*/
 
+::-webkit-scrollbar {
+    display: none;
+}
+
 body { margin:0; padding:0; }
 
 #map { position:absolute; top:0; bottom:0; width:100%; }
@@ -321,6 +325,193 @@ h3 {
     font-family: Skia;
     font-size: 15px;
 }
+
+#leftPanel{
+    position: absolute;
+    width: 40%;
+    height: 100%;
+    top: 0%;
+    left: 0%;
+    background-color: rgba(0,0,0,0.6);
+    z-index: 1000;
+    border-right: solid white 2px;
+    overflow: scroll;
+}
+#leftPanelContent{
+    position: absolute;
+    padding-right: 60px;
+    width: calc(100% - 20px);
+    height: 100%;
+    top: 0%;
+    left: 0%; 
+}
+
+
+#titleBox{
+    position: relative;
+    width: 100%;
+    top: 0px;
+}
+
+.title {
+    font-family: Skia;
+    font-size: 50px;
+    position: relative;
+    top: 4px;
+    left: 8px;
+}
+
+#subtitleBox{
+    position: relative;
+    width: 100%;
+    top: 0px;
+}
+
+.subtitle {
+    font-family: Skia;
+    font-size: 25px;
+    position: relative;
+    top: 4px;
+    left: 8px;
+}
+
+.svgContainer {
+    position: relative;
+    width: 100%;
+    height: 45px;
+    margin-top: 25px;
+    margin-bottom: 25px;
+}
+.svgContainer2 {
+    margin-left: 145px;
+}
+#leafSvg {
+    height: 45px;
+}
+
+.infoBlock {
+    position: relative;
+    display: block;
+}
+.p1 {
+    font-family: Skia;
+    font-size: 20px;
+    position: relative;
+    left: 8px;
+}
+.p4 {
+    font-family: Skia;
+    font-size: 20px;
+    position: relative;
+    left: 8px;
+    top: 15px;
+}
+
+#IB2 {
+    margin-top: 20px;
+    height: 220px;
+}
+#belizeShape {
+    position: absolute;
+    width: 30%;
+    height: 200px;
+
+}
+#Country_area {
+    position: absolute;
+    height: 100%;
+}
+
+#nextToText {
+    position: absolute;
+    width: 70%;
+    left: 30%;
+    height: 200px;
+}
+ul {
+    font-family: Skia;
+    font-size: 20px;
+    position: relative;
+    left: -8px; 
+    color: #fff;
+    line-height: 30px;
+}
+.ygraph {
+    letter-spacing: 10px;
+    font-family: Futura;
+    font-size: 30px;
+    position: relative;
+    left: 8px; 
+    top: 20px;
+    word-wrap: break-word;
+}
+
+#IB4{
+    margin-top: 40px;
+}
+
+#IB5{
+    margin-top: 20px;
+    height: 200px;
+}
+.beforeTxt{
+   font-family: Skia;
+    font-size: 20px;
+    position: relative;
+    left: 8px;
+    top: 10px;
+}
+.afterTxt{
+   font-family: Skia;
+    font-size: 20px;
+    position: relative;
+    left: 8px;
+    top: -10px;
+}
+.sqmiles{
+    font-family: Arial;
+    font-size: 90px;
+    color: #B05D5D;
+    position: relative;
+    left: 8px;
+
+}
+
+#hider{
+    position: absolute;
+    width: 35px;
+    height: 35px;
+    top: 3px;
+    right: 3px;
+    background-color: #000;
+    z-index: 2000;
+    border: solid white 1px;
+    border-radius: 3px;
+}
+#hider:hover{
+    cursor: pointer;
+    background-color: #B05D5D; 
+}
+
+#shower{
+    position: absolute;
+    width: 35px;
+    height: 35px;
+    top: 3px;
+    left: 3px;
+    background-color: #000;
+    z-index: 2000;
+    border: solid white 1px;
+    border-radius: 3px; 
+    display: none;
+}
+#shower:hover{
+    cursor: pointer;
+    background-color: #B05D5D; 
+}
+
+
+
 
 
 
