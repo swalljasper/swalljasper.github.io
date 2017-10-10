@@ -279,6 +279,9 @@ body {
 #CLimage {
 	max-width: 600px;
 }
+ #southChinaSea{
+ 	max-width: 500px;
+ }
 
 @media only screen and (max-width: 700px) {
     #full{
