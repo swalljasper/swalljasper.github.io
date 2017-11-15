@@ -1,0 +1,406 @@
+<?xml version="1.0" encoding="UTF-8"?><metadata>
+<idinfo>
+<citation>
+<citeinfo>
+<origin/>
+<pubdate>20120713</pubdate>
+<title>Metro Station Entrances (MetroEntPt)</title>
+<geoform>vector digital data</geoform>
+<pubinfo>
+<publish>DC GIS</publish>
+</pubinfo>
+<onlink>http://dcatlas.dcgis.dc.gov/catalog/download.asp?downloadName=MetroEntPt&amp;downloadTYPE=KMZ</onlink>
+<onlink>http://dcatlas.dcgis.dc.gov/catalog/download.asp?downloadName=MetroEntPt&amp;downloadTYPE=ESRI</onlink>
+<lworkcit>
+<citeinfo>
+<title>DC Geographic Information System</title>
+</citeinfo>
+</lworkcit>
+</citeinfo>
+</citation>
+<descript>
+<abstract>Metro Station Entrances - DC only. This dataset contains points representing Metro facilities, created as part of the DC Geographic Information System (DC GIS) for the D.C. Office of the Chief Technology Officer (OCTO) and participating D.C. government agencies. Station centroids were identified from visual observation of orthophotography and extracted from the planimetric data and a centroid for each entrance was heads-up digitized from the snapbase. All DC GIS data is stored and exported in Maryland State Plane coordinates NAD 83 meters..</abstract>
+<purpose>Metro stations that are located within the District of Columbia.</purpose>
+</descript>
+<timeperd>
+<timeinfo>
+<sngdate>
+<caldate>20120713</caldate>
+</sngdate>
+</timeinfo>
+<current>publication date</current>
+</timeperd>
+<status>
+<progress>Complete</progress>
+<update>As needed</update>
+</status>
+<spdom>
+<bounding>
+<westbc>-180</westbc>
+<eastbc>180</eastbc>
+<northbc>90</northbc>
+<southbc>-90</southbc>
+</bounding>
+</spdom>
+<keywords>
+<theme>
+<themekt>None</themekt>
+<themekey>Bus Line</themekey>
+<themekey>Mass Transit</themekey>
+<themekey>transitMetro</themekey>
+<themekey>location</themekey>
+<themekey>WMATA</themekey>
+<themekey>transportation</themekey>
+<themekey>Commute</themekey>
+<themekey>Commuter</themekey>
+<themekey>Bus Route</themekey>
+<themekey>Bus Stop</themekey>
+<themekey>Public Transportation</themekey>
+<themekey>Canopy</themekey>
+<themekey>Transit</themekey>
+<themekey>Parapet</themekey>
+<themekey>Subway</themekey>
+<themekey>Rail Transit</themekey>
+<themekey>Washington Metropolitan Area Transit Authority</themekey>
+<themekey>Metro</themekey>
+<themekey>Conservation</themekey>
+</theme>
+<theme>
+<themekt>ISO 19115 Topic Categories</themekt>
+<themekey>location</themekey>
+<themekey>transportation</themekey>
+</theme>
+<place>
+<placekt>None</placekt>
+<placekey>District of Columbia</placekey>
+<placekey>Washington</placekey>
+<placekey>D.C.</placekey>
+<placekey>DC</placekey>
+<placekey>DC GIS</placekey>
+<placekey>DCGIS</placekey>
+</place>
+</keywords>
+<accconst>None</accconst>
+<useconst>This work is licensed under a Creative Commons Attribution 4.0 International License.</useconst>
+<ptcontac>
+<cntinfo>
+<cntorgp>
+<cntorg>D.C. Office of the Chief Technology Officer</cntorg>
+<cntper>GIS Data Coordinator</cntper>
+</cntorgp>
+<cntaddr>
+<addrtype>mailing and physical</addrtype>
+<address>441 4th St NW, Suite 930 South</address>
+<city>Washington</city>
+<state>DC</state>
+<postal>20001</postal>
+<country>US</country>
+</cntaddr>
+<cntfax>(202) 727-5660</cntfax>
+<cntemail>dcgis@dc.gov</cntemail>
+<hours>8:30 am - 5:00 pm</hours>
+</cntinfo>
+</ptcontac>
+<datacred>DC GIS, Washington Metropolitan Area Transit Authority (WMATA)</datacred>
+<native>Microsoft Windows XP Version 5.1 (Build 2600) Service Pack 3; ESRI ArcCatalog 9.3.1.4000</native>
+</idinfo>
+<dataqual>
+<attracc>
+<attraccr>Data believed to be complete and accurate, subject to change. Digital version compared with original source data for accuracy and completeness. In process of validation by source and/or responsible agency.</attraccr>
+</attracc>
+<logic>Not validated by source and/or responsible agency.</logic>
+<complete>Data believed to be complete and accurate, subject to change. Digital version compared with original source data for accuracy and completeness. In process of validation by source and/or responsible agency.</complete>
+<posacc>
+<horizpa>
+<horizpar>In process of validation by source and/or responsible agency.</horizpar>
+</horizpa>
+<vertacc>
+<vertaccr>N/A</vertaccr>
+</vertacc>
+</posacc>
+<lineage>
+<srcinfo>
+<srccite>
+<citeinfo>
+<title>WMATA website</title>
+</citeinfo>
+</srccite>
+<typesrc>onLine</typesrc>
+<srccitea>WMATA website</srccitea>
+<srccontr>locations and attributes</srccontr>
+</srcinfo>
+<srcinfo>
+<srccite>
+<citeinfo>
+<title>WMATA shapefile</title>
+</citeinfo>
+</srccite>
+<typesrc>None</typesrc>
+<srccitea>WMATA shapefile</srccitea>
+<srccontr>base geography for correction to planimetrics</srccontr>
+</srcinfo>
+<srcinfo>
+<srccite>
+<citeinfo>
+<pubdate>19950101</pubdate>
+<title>Orthophotography</title>
+</citeinfo>
+</srccite>
+<srcscale>1000</srcscale>
+<typesrc>hardcopyPhoto</typesrc>
+<srccitea>Orthophotography</srccitea>
+<srccontr>locations</srccontr>
+</srcinfo>
+<procstep>
+<procdesc>Staff modified the layer to reflect the yellow line extension.</procdesc>
+<proccont>
+<cntinfo>
+<cntorgp>
+<cntorg>Office of the Chief Technology Officer</cntorg>
+<cntper>GIS Data Coordinator</cntper>
+</cntorgp>
+<cntaddr>
+<addrtype>mailing and physical</addrtype>
+<address>441 4th St NW, Suite 930 South</address>
+<city>Washington</city>
+<state>DC</state>
+<postal>20001</postal>
+<country>US</country>
+</cntaddr>
+<cntfax>202-727-5660</cntfax>
+<cntemail>dcgis@dc.gov</cntemail>
+<hours>8:30am - 5:30pm</hours>
+</cntinfo>
+</proccont>
+</procstep>
+<procstep>
+<procdesc>Staff edited the attributes of the New York Ave-Florida Ave-Gallaudet U Station.</procdesc>
+<proccont>
+<cntinfo>
+<cntorgp>
+<cntorg>OCTO</cntorg>
+</cntorgp>
+<cntaddr>
+<addrtype>unknown</addrtype>
+<country>AF</country>
+</cntaddr>
+</cntinfo>
+</proccont>
+</procstep>
+<procstep>
+<procdesc>Metro entrances were compared against the 2005 orthophotography and moved accordingly. This mainly affected the new york avenue station.</procdesc>
+<proccont>
+<cntinfo>
+<cntorgp>
+<cntorg>Office of the Chief Technology Officer</cntorg>
+<cntper>GIS Data Coordinator</cntper>
+</cntorgp>
+<cntaddr>
+<addrtype>mailing and physical</addrtype>
+<address>441 4th St NW, Suite 930 South</address>
+<city>Washington</city>
+<state>DC</state>
+<postal>20001</postal>
+<country>US</country>
+</cntaddr>
+<cntfax>202-727-5660</cntfax>
+<cntemail>dcgis@dc.gov</cntemail>
+<hours>8:30am - 5:30pm</hours>
+</cntinfo>
+</proccont>
+</procstep>
+<procstep>
+<procdesc>Entrances and station centroids were identified from visual observation of orthophotography and extracted from the planimetric data and a centroid for each entrance was heads-up digitized from the 1995 orthophotographs. Platform centroids were identified from visual observation of orthophotography and extracted from the planimetric data and a centroid for each entrance was heads-up digitized from the 1995 orthophotographs. Attribute data was provided by the WMATA website. Planimetrics were created at a scale of 1:1,000. This means that a well defined feature falls within two feet of true position. All DC GIS data is stored and exported in Maryland State Plane coordinates NAD 83 meters.</procdesc>
+<procdate>20010806</procdate>
+<proccont>
+<cntinfo>
+<cntorgp>
+<cntorg>D.C. Office of the Chief Technology Officer</cntorg>
+<cntper>GIS Data Coordinator</cntper>
+</cntorgp>
+<cntaddr>
+<addrtype>mailing and physical</addrtype>
+<address>441 4th St NW, Suite 930 South</address>
+<city>Washington</city>
+<state>DC</state>
+<postal>20001</postal>
+<country>US</country>
+</cntaddr>
+<cntfax>(202) 727-5660</cntfax>
+<cntemail>dcgis@dc.gov</cntemail>
+<hours>8:30 am - 5:00 pm</hours>
+</cntinfo>
+</proccont>
+</procstep>
+<procstep>
+<procdesc>added an Anacostia Entrance, Removed a Federal Triangle Entrance, and Remove two Friendship Heights Entrances.</procdesc>
+<procdate>20120615</procdate>
+<proccont>
+<cntinfo>
+<cntorgp>
+<cntorg>OCTO</cntorg>
+</cntorgp>
+<cntaddr>
+<addrtype>unknown</addrtype>
+<country>AF</country>
+</cntaddr>
+</cntinfo>
+</proccont>
+</procstep>
+<procstep>
+<procdesc>Added yellow and orange line rush plus information.</procdesc>
+<procdate>20120713</procdate>
+<proccont>
+<cntinfo>
+<cntorgp>
+<cntorg>OCTO</cntorg>
+</cntorgp>
+<cntaddr>
+<addrtype>unknown</addrtype>
+<country>AF</country>
+</cntaddr>
+</cntinfo>
+</proccont>
+</procstep>
+</lineage>
+</dataqual>
+<spdoinfo>
+<direct>Vector</direct>
+<ptvctinf>
+<sdtsterm>
+<sdtstype>Entity point</sdtstype>
+<ptvctcnt>0</ptvctcnt>
+</sdtsterm>
+<sdtsterm>
+<sdtstype>Entity point</sdtstype>
+<ptvctcnt>0</ptvctcnt>
+</sdtsterm>
+</ptvctinf>
+</spdoinfo>
+<eainfo>
+<detailed>
+<enttyp>
+<enttypl>DCGIS.MetroEntPt</enttypl>
+</enttyp>
+<attr>
+<attrlabl>WEB_URL</attrlabl>
+<attrdef>web link url</attrdef>
+</attr>
+<attr>
+<attrlabl>EXIT_TO_ST</attrlabl>
+<attrdef>Exit to station name</attrdef>
+<attrdefs>ESRI</attrdefs>
+<attrdomv>
+					<udom>Coordinates defining the features.</udom>
+				</attrdomv>
+</attr>
+<attr>
+<attrlabl>SHAPE</attrlabl>
+<attrdef>Feature geometry.</attrdef>
+<attrdefs>ESRI</attrdefs>
+<attrdomv>
+					<udom>Coordinates defining the features.</udom>
+				</attrdomv>
+</attr>
+<attr>
+<attrlabl>GIS_ID</attrlabl>
+<attrdef>OCTO GIS sequential identifier</attrdef>
+</attr>
+<attr>
+<attrlabl>NAME</attrlabl>
+<attrdef>feature name</attrdef>
+</attr>
+<attr>
+<attrlabl>OBJECTID_1</attrlabl>
+<attrdef>Internal feature number.</attrdef>
+<attrdefs>ESRI</attrdefs>
+<attrdomv>
+					<udom>Sequential unique whole numbers that are automatically generated.</udom>
+				</attrdomv>
+</attr>
+<attr>
+<attrlabl>FEATURECOD</attrlabl>
+</attr>
+<attr>
+<attrlabl>DESCRIPTIO</attrlabl>
+<attrdef>Internal feature number.</attrdef>
+<attrdefs>ESRI</attrdefs>
+<attrdomv>
+					<udom>Sequential unique whole numbers that are automatically generated.</udom>
+				</attrdomv>
+</attr>
+<attr>
+<attrlabl>ADDRESS_ID</attrlabl>
+</attr>
+<attr>
+<attrlabl>Shape</attrlabl>
+<attrdef>Feature geometry.</attrdef>
+<attrdefs>ESRI</attrdefs>
+<attrdomv>
+					<udom>Coordinates defining the features.</udom>
+				</attrdomv>
+</attr>
+<attr>
+<attrlabl>CAPTUREYEA</attrlabl>
+</attr>
+<attr>
+<attrlabl>LINE</attrlabl>
+</attr>
+<attr>
+<attrlabl>OBJECTID</attrlabl>
+<attrdef>unique id</attrdef>
+</attr>
+</detailed>
+</eainfo>
+<distinfo>
+<distrib>
+<cntinfo>
+<cntorgp>
+<cntorg>D.C. Office of the Chief Technology Officer</cntorg>
+<cntper>GIS Data Coordinator</cntper>
+</cntorgp>
+<cntaddr>
+<addrtype>mailing and physical</addrtype>
+<address>441 4th St NW, Suite 930 South</address>
+<city>Washington</city>
+<state>DC</state>
+<postal>20001</postal>
+<country>US</country>
+</cntaddr>
+<cntfax>(202) 727-5660</cntfax>
+<cntemail>dcgis@dc.gov</cntemail>
+<hours>8:30 am - 5:00 pm</hours>
+<cntinst>dcgis@dc.gov</cntinst>
+</cntinfo>
+</distrib>
+<distliab>Acknowledgment of the DC Geographic Information Systems Program (DC GIS). The District of Columbia Government makes no claims as to the completeness, accuracy or content of any data contained hereon, and makes no representation of any kind, including, but not limited to, the warranty of the accuracy or fitness for a particular use, nor are any such warranties to be implied or inferred with respect to the information or data furnished herein.</distliab>
+<custom>Most DC GIS datasets can be downloaded from "http://dcgis.dc.gov" on the data center page. Orders can also be made by contacting OCTO GIS at "dcgis@dc.gov", especially for datasets not available for download.</custom>
+</distinfo>
+<metainfo>
+<metd>20120727</metd>
+<metrd>01/07/04</metrd>
+<metc>
+<cntinfo>
+<cntorgp>
+<cntorg>D.C. Office of the Chief Technology Officer</cntorg>
+<cntper>GIS Data Coordinator</cntper>
+</cntorgp>
+<cntaddr>
+<addrtype>mailing and physical</addrtype>
+<address>441 4th St NW, Suite 930 South</address>
+<city>Washington</city>
+<state>DC</state>
+<postal>20001</postal>
+<country>US</country>
+</cntaddr>
+<cntfax>(202) 727-5660</cntfax>
+<cntemail>dcgis@dc.gov</cntemail>
+<hours>8:30 am - 5:00 pm</hours>
+<cntinst>email</cntinst>
+</cntinfo>
+</metc>
+<metstdn>FGDC Content Standard for Digital Geospatial Metadata</metstdn>
+<metstdv>FGDC-STD-001-1998</metstdv>
+<mettc>local time</mettc>
+</metainfo>
+</metadata>

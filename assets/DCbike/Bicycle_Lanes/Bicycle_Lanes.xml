@@ -1,0 +1,174 @@
+<?xml version="1.0" encoding="UTF-8"?><metadata>
+<idinfo>
+<citation>
+<citeinfo>
+<title>Bicycle Lanes</title>
+</citeinfo>
+</citation>
+<descript>
+<abstract>Bicycle Lanes. The dataset contains locations and attributes of both existing and proposed bicycle lanes based upon the DC Bicycle Master Plan. These are not bicycle trails. Created as part of the District of Columbia, Department of Transportation (DDOT) Street Spatial Database (SSD).</abstract>
+</descript>
+<keywords>
+<theme>
+<themekt>None</themekt>
+<themekey>Open Data</themekey>
+<themekey>Washington DC</themekey>
+<themekey>DC GIS</themekey>
+<themekey>District of Columbia</themekey>
+<themekey>Transportation</themekey>
+<themekey>bike</themekey>
+</theme>
+</keywords>
+<accconst>None</accconst>
+<useconst>This work is licensed under a Creative Commons Attribution 4.0 International License.</useconst>
+</idinfo>
+<spdoinfo>
+<ptvctinf>
+<sdtsterm>
+<ptvctcnt>982</ptvctcnt>
+</sdtsterm>
+</ptvctinf>
+</spdoinfo>
+<eainfo>
+<detailed>
+<enttyp>
+<enttypl>DCGIS.BicycleLane</enttypl>
+<enttypd>BicycleLane is the line geometry that represents DDOT Bicycle Lanes</enttypd>
+<enttypds>District of Columbia, Department of Transportation</enttypds>
+</enttyp>
+<attr>
+<attrlabl>NEED_SYMBOL</attrlabl>
+</attr>
+<attr>
+<attrlabl>STREETSEGID</attrlabl>
+</attr>
+<attr>
+<attrlabl>Shape</attrlabl>
+<attrdef>Feature geometry</attrdef>
+<attrdefs>ESRI</attrdefs>
+<attrdomv>
+					<udom>Coordinates defining the features.</udom>
+				</attrdomv>
+</attr>
+<attr>
+<attrlabl>BikeLaneLength</attrlabl>
+<attrdef>Feature geometry.</attrdef>
+<attrdefs>ESRI</attrdefs>
+<attrdomv>
+					<udom>Coordinates defining the features.</udom>
+				</attrdomv>
+</attr>
+<attr>
+<attrlabl>SHAPE</attrlabl>
+<attrdef>Feature geometry.</attrdef>
+<attrdefs>ESRI</attrdefs>
+<attrdomv>
+					<udom>Coordinates defining the features.</udom>
+				</attrdomv>
+</attr>
+<attr>
+<attrlabl>PLANSREADY</attrlabl>
+</attr>
+<attr>
+<attrlabl>Facility</attrlabl>
+<attrdef>Combination of the street centerline and bike facility.</attrdef>
+<attrdefs>ESRI</attrdefs>
+<attrdomv>
+					<udom>Sequential unique whole numbers that are automatically generated.</udom>
+				</attrdomv>
+</attr>
+<attr>
+<attrlabl>SHAPE_LENG</attrlabl>
+</attr>
+<attr>
+<attrlabl>SHAPE_LENGTH0</attrlabl>
+</attr>
+<attr>
+<attrlabl>PROPOSEDCYCLETRACK</attrlabl>
+</attr>
+<attr>
+<attrlabl>BIKELANELENGTH</attrlabl>
+<attrdef>Internal feature number.</attrdef>
+<attrdefs>ESRI</attrdefs>
+<attrdomv>
+					<udom>Sequential unique whole numbers that are automatically generated.</udom>
+				</attrdomv>
+</attr>
+<attr>
+<attrlabl>SOURCEID</attrlabl>
+<attrdef>Feature geometry.</attrdef>
+<attrdefs>ESRI</attrdefs>
+<attrdomv>
+					<udom>Coordinates defining the features.</udom>
+				</attrdomv>
+</attr>
+<attr>
+<attrlabl>OBJECTID</attrlabl>
+<attrdef>Internal feature number.</attrdef>
+<attrdefs>ESRI</attrdefs>
+<attrdomv>
+					<udom>Sequential unique whole numbers that are automatically generated.</udom>
+				</attrdomv>
+</attr>
+<attr>
+<attrlabl>GAP</attrlabl>
+</attr>
+<attr>
+<attrlabl>GAP_NOTES</attrlabl>
+</attr>
+<attr>
+<attrlabl>BIKELANE_YEAR</attrlabl>
+</attr>
+<attr>
+<attrlabl>SHAPE.LEN</attrlabl>
+</attr>
+<attr>
+<attrlabl>FACILITYID</attrlabl>
+</attr>
+<attr>
+<attrlabl>NEED_SYM_1</attrlabl>
+</attr>
+<attr>
+<attrlabl>REPAINT_LINE</attrlabl>
+</attr>
+<attr>
+<attrlabl>FACILITY</attrlabl>
+<attrdef>Feature geometry.</attrdef>
+<attrdefs>ESRI</attrdefs>
+<attrdomv>
+					<udom>Coordinates defining the features.</udom>
+				</attrdomv>
+</attr>
+</detailed>
+</eainfo>
+<distinfo>
+<distrib>
+<cntinfo>
+<!--no contact person or organization name available-->
+<cntaddr>
+<addrtype>unknown</addrtype>
+<address>200 I Street SE, 5th Floor</address>
+<country>AF</country>
+</cntaddr>
+</cntinfo>
+</distrib>
+<distliab>For data terms and conditions, go to http://dc.gov/page/terms-and-conditions-use-district-data</distliab>
+<custom>All data is available at http://opendata.dc.gov</custom>
+</distinfo>
+<metainfo>
+<metd>20151119</metd>
+<metc>
+<cntinfo>
+<!--no contact person or organization name available-->
+<cntaddr>
+<addrtype>unknown</addrtype>
+<address>200 I Street SE, 5th Floor</address>
+<country>AF</country>
+</cntaddr>
+</cntinfo>
+</metc>
+<metstdn>FGDC Content Standard for Digital Geospatial Metadata</metstdn>
+<metstdv>FGDC-STD-001-1998</metstdv>
+<mettc>local time</mettc>
+</metainfo>
+</metadata>
