@@ -3,6 +3,13 @@
 	background-image: url("../assets/paris-bw-01.png"); 
 }*/
 
+@font-face {
+font-family: 'Tw Cen MT';
+font-style: normal;
+font-weight: normal;
+src: local('Tw Cen MT'), url('Tw Cen MT.woff') format('woff');
+}
+
 h1 {
 	font-family: Tw Cen MT;
 	font-size: 25px;
@@ -101,7 +108,7 @@ body {
 
 
 .container {
-	background-image: url("../assets/belize-texture.png");
+	/*background-image: url("../assets/belize-texture.png");*/
 	padding-right: 15px;
   	padding-left: 15px;
   	margin-right: auto;
@@ -110,7 +117,7 @@ body {
 }
 
 .container-fluid {
-	background-image: url("../assets/belize-texture.png");
+	/*background-image: url("../assets/belize-texture.png");*/
 	padding-right: 15px;
   	padding-left: 15px;
   	margin-right: auto;
@@ -222,6 +229,7 @@ body {
 #Niger {
 	max-width: 4.5in;
 	max-height: 6.5in;
+	padding-bottom: 20px;
 }
 
 #Construction {
@@ -277,10 +285,15 @@ body {
 }
 
 #CLimage {
-	max-width: 600px;
+	max-width: 1020px;
 }
  #southChinaSea{
  	max-width: 500px;
+ }
+
+ #magImage{
+ 	max-width: 200px;
+ 	margin-bottom: 25px; 
  }
 
 @media only screen and (max-width: 700px) {
